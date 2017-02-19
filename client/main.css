@@ -1,0 +1,9 @@
+/* CSS declarations go here */
+.label-as-badge {
+    border-radius: 1em;
+}
+
+img.resize{
+    width:32px; /* you can use % */
+    height: auto;
+}

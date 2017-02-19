@@ -1,0 +1,11 @@
+<template name="footer">
+  <hr />
+  {{#each alerts}}
+    <div class="alert alert-{{type}} alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" action="discard"><span aria-hidden="true">&times;</span></button>
+      <strong>{{type}}!</strong> {{text}}, {{fromNow createdAt}}.
+    </div>
+  {{/each}}
+  <p>Copyleft &copy; DOG, 2016.</p>
+</template>
+

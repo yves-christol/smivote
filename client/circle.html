@@ -1,0 +1,20 @@
+
+<template name="circle">
+  {{#with circle}}
+    <h1 class="h4"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Circle {{ name }}</h1>
+  {{/with}}
+
+  {{#with circle}}
+    <h1 class="h4"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Invite someone to {{ name }} </h1>
+    <form class="new-invitation">
+      <div class="input-group">
+        <input type="text" name="text" class="form-control" placeholder="Email of the invitee">
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Send</button>
+        </span>
+      </div>
+    </form>
+  {{/with}}
+
+</template>
+

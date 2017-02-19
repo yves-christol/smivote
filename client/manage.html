@@ -1,0 +1,33 @@
+
+<template name="manage">
+  <h1 class="h4"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Invitations </h1>
+  <ul class="list-group">
+    {{#each invitations}}
+      <li class="list-group-item">
+      <b>Someone</b> invited you to join the <b>{{circle}}</b> circle on {{createdAt}}.  
+      <button type="button" class="btn-sm btn-success" name="accept"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept</button> 
+      <button type="button" class="btn-sm btn-danger"  name="reject"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Reject</button> 
+      </li>
+    {{/each}}
+  </ul>
+  <hr />
+  <h1 class="h4"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Your Circles</h1>
+  <ul class="list-group">
+    {{#each members}}
+      <li class="list-group-item">You're {{role}} of <a href="/circle/{{circleId}}"><b>{{circle}}</b></a> since {{formatDate createdAt}}. 
+      <button type="button" class="btn-sm btn-danger" name="quit"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span> Quit</button>
+      </li>
+    {{/each}}
+  </ul>
+  <hr />
+  <h1 class="h4"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> Create a new circle </h1>
+  <form class="new-circle">
+    <div class="input-group">
+      <input type="text" name="text" class="form-control" placeholder="Name of the new circle">
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Create</button>
+      </span>
+    </div>
+  </form>
+</template>
+
